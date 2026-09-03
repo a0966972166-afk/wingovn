@@ -3,29 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUNWIN CRYPTO</title>
+    <title>SUNWIN x WIN GO OFFICIAL</title>
     <style>
-        body { background-color: #0b0b0b; color: #fff; font-family: Arial, sans-serif; text-align: center; padding-top: 20%; }
-        .loading { font-size: 20px; color: #ffca28; font-weight: bold; }
+        /* Phong cách Casino Macau Luxury */
+        body { background-color: #0d0d0d; color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { max-width: 450px; width: 90%; background: linear-gradient(145deg, #141414, #1f1f1f); padding: 30px; border-radius: 20px; border: 2px solid #d4af37; box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15); }
+        .logo-text { font-size: 32px; font-weight: 900; color: #ffdf00; text-shadow: 0px 4px 10px rgba(255, 223, 0, 0.5); letter-spacing: 2px; margin-bottom: 5px; }
+        .sub-logo { font-size: 16px; color: #ff3333; font-weight: bold; background-color: #ffe6e6; display: inline-block; padding: 3px 15px; border-radius: 50px; margin-bottom: 25px; box-shadow: 0 0 10px rgba(255, 51, 51, 0.3); }
+        .gift-box { background: rgba(255, 255, 255, 0.05); border: 1px dashed #d4af37; padding: 20px; border-radius: 12px; margin-bottom: 25px; }
+        .gift-title { color: #b3b3b3; font-size: 14px; margin: 0 0 5px 0; text-transform: uppercase; }
+        .gift-amount { color: #2ecc71; font-size: 28px; font-weight: bold; margin: 0; text-shadow: 0 0 10px rgba(46, 204, 113, 0.3); }
+        .notice { font-size: 14px; color: #ffcc00; margin: 15px 0 25px 0; font-style: italic; font-weight: 500; }
+        
+        /* Cấu hình Button chung */
+        .btn-base { display: block; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: bold; padding: 16px; border-radius: 50px; margin-bottom: 18px; transition: transform 0.2s, box-shadow 0.2s; text-transform: uppercase; }
+        .btn-base:hover { transform: scale(1.03); }
+        
+        /* Cổng 1: Màu xanh lá nhấp nháy thu hút cực mạnh */
+        .btn-bot { background: linear-gradient(90deg, #2ecc71, #27ae60); box-shadow: 0 5px 20px rgba(46, 204, 113, 0.4); animation: pulse 1.5s infinite; }
+        
+        /* Cổng 2: Màu xanh dương Telegram chuyên nghiệp */
+        .btn-channel { background: linear-gradient(90deg, #2980b9, #3498db); box-shadow: 0 5px 20px rgba(52, 152, 219, 0.4); }
+        
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(46, 204, 113, 0); } 100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); } }
+        .footer { font-size: 11px; color: #555; margin-top: 25px; }
     </style>
-    <script>
-        // 您的 H5 推廣主網址
-        const targetUrl = "https://wingo.life";
-
-        window.onload = function() {
-            // 自動捕捉 Adsterra 傳過來的所有成效追蹤參數
-            const urlParams = window.location.search;
-            const finalUrl = targetUrl + (urlParams ? urlParams.replace('?', '&') : '');
-            
-            // 延遲 0.5 秒後自動執行隱形跳轉
-            setTimeout(function() {
-                window.location.href = finalUrl;
-            }, 500);
-        }
-    </script>
 </head>
 <body>
-    <div class="loading">Đang kết nối đến cổng game SUNWIN...</div>
-    <p>Vui lòng đợi trong giây lát...</p>
+
+<div class="container">
+    <!-- Brand lớn kết hợp -->
+    <div class="logo-text">🎰 SUNWIN x WIN GO</div>
+    <div class="sub-logo">CRYPTO EDITION 2026</div>
+    
+    <!-- Box quà tặng chào mừng -->
+    <div class="gift-box">
+        <p class="gift-title">QUÀ TẶNG THÀNH VIÊN MỚI</p>
+        <p class="gift-amount">+ 5 USDT FREE</p>
+    </div>
+
+    <p class="notice">🎁 Vui lòng chọn cổng vào để kích hoạt mã thưởng tự động:</p>
+
+    <!-- CỔNG 1: Nhảy thẳng vào Telegram Bot để CHƠI GAME -->
+    <a href="https://t.me" class="btn-base btn-bot" id="botLink">
+        🎮 CỔNG 1: VÀO BOT CHƠI NGAY
+    </a>
+
+    <!-- CỔNG 2: Nhảy vào Kênh Telegram để NHẬN CODE PHÁT LỘC -->
+    <a href="https://t.me" class="btn-base btn-channel" id="channelLink">
+        📢 CỔNG 2: VÀO KÊNH PHÁT CODE
+    </a>
+
+    <div class="footer">
+        Bảo mật mã hóa chuỗi khối • Hệ thống xanh chín tự động 24/7
+    </div>
+</div>
+
+<script>
+    /* Tự động chuyển tiếp tham số Adsterra sang các liên kết TG, đảm bảo bạn không bị mất dữ liệu tracking */
+    window.onload = function() {
+        const urlParams = window.location.search;
+        if(urlParams) {
+            const botBtn = document.getElementById('botLink');
+            const channelBtn = document.getElementById('channelLink');
+            
+            const cleanParams = urlParams.replace('?', '&');
+            botBtn.href = botBtn.href + cleanParams;
+            channelBtn.href = channelBtn.href + urlParams;
+        }
+    }
+</script>
+
 </body>
 </html>
